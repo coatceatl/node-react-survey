@@ -1,9 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.get('/', (req, res) => {
-  res.send('server node/express');
-});
+app.use(express.static(__dirname));
 
 const PORT = process.env.PORT || 5000;
 
